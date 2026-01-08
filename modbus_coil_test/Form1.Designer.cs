@@ -36,6 +36,9 @@
             lblSensor7 = new Label();
             txtInterval = new TextBox();
             btnManual961 = new Button();
+            txtCycleMin = new TextBox();
+            btnStartCycle = new Button();
+            lblCycleStatus = new Label();
             SuspendLayout();
             // 
             // txtIpAddress
@@ -58,17 +61,17 @@
             // 
             // btnStartAuto
             // 
-            btnStartAuto.Location = new Point(112, 264);
+            btnStartAuto.Location = new Point(329, 168);
             btnStartAuto.Name = "btnStartAuto";
             btnStartAuto.Size = new Size(143, 32);
             btnStartAuto.TabIndex = 2;
-            btnStartAuto.Text = "자동";
+            btnStartAuto.Text = "켜질 시간/mm";
             btnStartAuto.UseVisualStyleBackColor = true;
             btnStartAuto.Click += btnStartAuto_Click;
             // 
             // btnManual960
             // 
-            btnManual960.Location = new Point(295, 264);
+            btnManual960.Location = new Point(103, 283);
             btnManual960.Name = "btnManual960";
             btnManual960.Size = new Size(143, 32);
             btnManual960.TabIndex = 3;
@@ -104,7 +107,7 @@
             // btnManual961
             // 
             btnManual961.BackColor = Color.BlanchedAlmond;
-            btnManual961.Location = new Point(329, 209);
+            btnManual961.Location = new Point(329, 283);
             btnManual961.Name = "btnManual961";
             btnManual961.Size = new Size(143, 32);
             btnManual961.TabIndex = 7;
@@ -112,11 +115,40 @@
             btnManual961.UseVisualStyleBackColor = false;
             btnManual961.Click += btnManual961_Click;
             // 
+            // txtCycleMin
+            // 
+            txtCycleMin.Location = new Point(97, 212);
+            txtCycleMin.Name = "txtCycleMin";
+            txtCycleMin.Size = new Size(179, 23);
+            txtCycleMin.TabIndex = 8;
+            // 
+            // btnStartCycle
+            // 
+            btnStartCycle.Location = new Point(329, 209);
+            btnStartCycle.Name = "btnStartCycle";
+            btnStartCycle.Size = new Size(143, 32);
+            btnStartCycle.TabIndex = 9;
+            btnStartCycle.Text = "순환 타이머/분";
+            btnStartCycle.UseVisualStyleBackColor = true;
+            btnStartCycle.Click += btnStartCycle_Click;
+            // 
+            // lblCycleStatus
+            // 
+            lblCycleStatus.AutoSize = true;
+            lblCycleStatus.Location = new Point(499, 220);
+            lblCycleStatus.Name = "lblCycleStatus";
+            lblCycleStatus.Size = new Size(39, 15);
+            lblCycleStatus.TabIndex = 10;
+            lblCycleStatus.Text = "label2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblCycleStatus);
+            Controls.Add(btnStartCycle);
+            Controls.Add(txtCycleMin);
             Controls.Add(btnManual961);
             Controls.Add(txtInterval);
             Controls.Add(lblSensor7);
@@ -141,5 +173,8 @@
         private Label lblSensor7;
         private TextBox txtInterval;
         private Button btnManual961;
+        private TextBox txtCycleMin;
+        private Button btnStartCycle;
+        private Label lblCycleStatus;
     }
 }
